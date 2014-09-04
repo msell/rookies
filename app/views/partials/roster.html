@@ -1,0 +1,28 @@
+<section class="matter">
+    <div class="container">
+        <div class="widget-content text-center text-info">
+            <table class="table table-condensed table-striped">
+
+                <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Team</th>
+                    <th>Bye</th>
+                    <th>Total Points</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="p in rosterCtrl.roster.players">
+                    <td>{{p.firstName}}</td>
+                    <td>{{p.lastName}}</td>
+                    <td>{{p.team}}</td>
+                    <td>{{p.byeWeek}}</td>
+                    <td>{{p.totalPoints}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
