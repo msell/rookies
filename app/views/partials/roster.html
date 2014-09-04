@@ -6,8 +6,7 @@
                 <thead>
                 <tr>
                     <th>Position</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
+                    <th>Name</th>
                     <th>Team</th>
                     <th>Bye</th>
                     <th>Total Points</th>
@@ -15,8 +14,8 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="p in rosterCtrl.roster.players">
-                    <td>{{p.firstName}}</td>
-                    <td>{{p.lastName}}</td>
+                    <td>{{p.position}}</td>
+                    <td>{{p.firstName}} {{p.lastName}}</td>
                     <td>{{p.team}}</td>
                     <td>{{p.byeWeek}}</td>
                     <td>{{p.totalPoints}}</td>
