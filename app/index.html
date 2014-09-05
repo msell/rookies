@@ -8,12 +8,14 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/toastr/toastr.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="styles/customtheme.css" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet" />
     <!-- endbuild -->
 </head>
 <body ng-app="rookiesApp">
@@ -23,22 +25,21 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<div class="container">
-    <div class="header">
-        <ul class="nav nav-pills pull-right">
-            <li class="active"><a ng-href="#">Home</a></li>
-            <li><a ng-href="#/about">About</a></li>
-            <li><a ng-href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">rookies</h3>
-    </div>
-
-    <div ng-view=""></div>
-
-    <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+<div>
+    <div data-ng-include="'layout/shell.html'"></div>
+    <div id="splash-page" data-ng-show="false">
+        <div class="page-splash">
+            <div class="page-splash-message">
+                Hot Towel Angular
+            </div>
+            <div class="progress progress-striped active page-progress-bar">
+                <div class="bar"></div>
+            </div>
+        </div>
     </div>
 </div>
+
+<span data-cc-scroll-to-top></span>
 
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

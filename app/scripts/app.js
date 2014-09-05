@@ -17,18 +17,4 @@ angular
     'ngSanitize',
     'ngTouch',
     'common'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'dashboard/dashboard.html',
-        controller: 'DashboardCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+  ]);
