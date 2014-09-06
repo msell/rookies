@@ -39,29 +39,6 @@
                         content: '<i class="fa fa-lock"></i> Admin'
                     }
                 }
-
-            }, {
-                url: '/foo',
-                config: {
-                    title: 'foo',
-                    templateUrl: 'admin/admin.html',
-                    settings: {
-                        nav: 3,
-                        content: '<i class="fa fa-lock"></i> Foo'
-                    }
-                }
-
-            }, {
-                url: '/bar',
-                config: {
-                    title: 'bar',
-                    templateUrl: 'admin/admin.html',
-                    settings: {
-                        nav: 4,
-                        content: '<i class="fa fa-lock"></i> Bar'
-                    }
-                }
-
             }
         ];
     }
