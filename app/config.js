@@ -27,5 +27,8 @@
             $logProvider.debugEnabled(true);
         }
     }]);
-
+    app.config(['commonConfigProvider', function (cfg) {
+        cfg.config.controllerActivateSuccessEvent = config.events.controllerActivateSuccess;
+        cfg.config.spinnerToggleEvent = config.events.spinnerToggle;
+    }]);
 })();
