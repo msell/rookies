@@ -190,7 +190,7 @@
                 'rightText': '@',
                 'allowCollapse': '@'
             },
-            templateUrl: '/app/layout/widgetheader.html',
+            templateUrl: 'layout/widgetheader.html',
             restrict: 'A',
         };
         return directive;
