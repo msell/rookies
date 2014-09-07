@@ -8,7 +8,7 @@
         var $q = common.$q;
 
         var service = {
-            getPeople: getPeople,
+            getRoster: getPeople,
             getMessageCount: getMessageCount
         };
 
@@ -23,7 +23,7 @@
                 { position: 'WR', firstName: 'Dez', lastName: 'Bryant', team: 'Cowboys', byeWeek: 4, totalPoints: 0 },
                 { position: 'TE', firstName: 'Jason', lastName: 'Witten', team: 'Cowboys', byeWeek: 4, totalPoints: 0 },
                 { position: 'WR', firstName: 'Terrance', lastName: 'Williams', team: 'Cowboys', byeWeek: 4, totalPoints: 0 },
-                { position: 'DEF', firstName: 'Seatle', lastName: 'Seahawks', team: 'Seahawks', byeWeek: 4, totalPoints: 0 },
+                { position: 'DEF', firstName: 'Seatle', lastName: 'Seahawks', team: 'Seahawks', byeWeek: 4, totalPoints: 0 }
             ];
             return $q.when(people);
         }

@@ -22,7 +22,7 @@
         activate();
 
         function activate() {
-            var promises = [getMessageCount(), getPeople()];
+            var promises = [getMessageCount(), getRoster()];
             common.activateController(promises, controllerId)
                 .then(function () { log('Activated Dashboard View'); });
         }
@@ -39,8 +39,8 @@
             });
         }
 
-        function getPeople() {
-            return datacontext.getPeople().then(function (data) {
+        function getRoster() {
+            return datacontext.getRoster().then(function (data) {
                 return vm.people = data;
             });
         }
