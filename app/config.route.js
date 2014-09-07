@@ -30,12 +30,22 @@
                     }
                 }
             }, {
+                url: '/league',
+                config: {
+                    title: 'league',
+                    templateUrl: 'league/league.html',
+                    settings: {
+                        nav: 2,
+                        content: '<i class="fa fa-male"></i> League'
+                    }
+                }
+            }, {
                 url: '/admin',
                 config: {
                     title: 'admin',
                     templateUrl: 'admin/admin.html',
                     settings: {
-                        nav: 2,
+                        nav: 3,
                         content: '<i class="fa fa-lock"></i> Admin'
                     }
                 }

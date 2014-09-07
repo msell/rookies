@@ -33,12 +33,6 @@
             });
         }
 
-        function getLeague() {
-            return datacontext.getLeague().then(function(data) {
-                return vm.league = data;
-            });
-        }
-
         function getRoster() {
             return datacontext.getRoster().then(function (data) {
                 return vm.people = data;

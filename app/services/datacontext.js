@@ -2,14 +2,15 @@
     'use strict';
 
     var serviceId = 'datacontext';
-    angular.module('rookiesApp').factory(serviceId, ['common', datacontext]);
+    angular.module('rookiesApp').factory(serviceId, ['$http','common', datacontext]);
 
-    function datacontext(common) {
+    function datacontext($http, common) {
         var $q = common.$q;
 
         var service = {
             getRoster: getPeople,
-            getMessageCount: getMessageCount
+            getMessageCount: getMessageCount,
+            getLeague: getLeague
         };
 
         return service;
@@ -27,5 +28,16 @@
             ];
             return $q.when(people);
         }
+
+        function getLeague() {
+            var url = 'http://football4.myfantasyleague.com/2014/export/export?TYPE=league&L=13040&W=&JSON=1&F=0012&callback=JSON_CALLBACK';
+
+            return $q.when($http.jsonp(url).success(function(data){
+                console.log(data);
+            }).error(function(data, status){
+                console.log(status);
+            }));
+        }
+
     }
 })();
