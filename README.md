@@ -2,6 +2,6 @@ rookies
 =======
 
 **Dev notes**
-> npm install
-> bower install
-> grunt serve
+- npm install
+- bower install
+- grunt serve
