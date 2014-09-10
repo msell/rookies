@@ -1,8 +1,6 @@
 var express = require("express");
-var logfmt = require("logfmt");
-var app = express();
 
-app.use(logfmt.requestLogger());
+var app = express();
 
 app.use(express.static(__dirname + '/app'));
 //add this so the browser can GET the bower files
