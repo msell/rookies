@@ -2,7 +2,7 @@
   "name": "rookies",
   "version": "0.0.0",
   "dependencies": {
-    "express": "^4.9.0" 
+    "express": "^4.9.0"
   },
   "devDependencies": {
     "grunt": "^0.4.1",
