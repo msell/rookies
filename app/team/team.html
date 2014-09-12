@@ -1,0 +1,35 @@
+<section id="dashboard-view" class="mainbar" data-ng-controller="team as vm">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="widget wviolet">
+                        <div data-cc-widget-header title="Dumb Punts"
+                             allow-collapse="true"></div>
+                        <div class="widget-content text-center text-info">
+                            {{vm.team}} <!-- data is here, but binding not working -->
+                            <table class="table table-condensed table-striped">
+
+                                <thead>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr data-ng-repeat="p in vm.team">
+                                    <td>{{p.firstname}}</td>
+                                    <td>{{p.lastname}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="widget-foot">
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

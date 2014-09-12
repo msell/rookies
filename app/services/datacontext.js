@@ -10,7 +10,7 @@
         var service = {
             getRoster: getPeople,
             getMessageCount: getMessageCount,
-            getLeague: getLeague
+            getTeam: getTeam
         };
 
         return service;
@@ -29,7 +29,7 @@
             return $q.when(people);
         }
 
-        function getLeague() {
+        function getTeam() {
             var url = 'http://whoshouldibench.herokuapp.com/mfl_rosters/1?league=13040&roster=Dumb%20Punts&callback=JSON_CALLBACK';
 
             return $q.when($http.jsonp(url).success(function(data){

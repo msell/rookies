@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    var controllerId = 'league';
+    var controllerId = 'team';
     angular.module('rookiesApp').controller(controllerId, ['common', 'datacontext', dashboard]);
 
     function dashboard(common, datacontext) {
@@ -11,19 +11,19 @@
         vm.leagueName = "Rookies report to camp";
         vm.league = {};
         vm.messageCount = 0;
-        vm.league = {};
+        vm.team = [];
         vm.title = 'League';
         activate();
 
         function activate() {
-            var promises = [getLeague()];
+            var promises = [getTeam()];
             common.activateController(promises, controllerId)
-                .then(function () { log('Activated League View'); });
+                .then(function () { log('Activated Team View'); });
         }
 
-        function getLeague() {
-            return datacontext.getLeague().then(function(data) {
-                return vm.league = data;
+        function getTeam() {
+            return datacontext.getTeam().then(function(data) {
+                return vm.team = data;
             });
         }
     }

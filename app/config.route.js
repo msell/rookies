@@ -30,13 +30,13 @@
                     }
                 }
             }, {
-                url: '/league',
+                url: '/team',
                 config: {
-                    title: 'league',
-                    templateUrl: 'league/league.html',
+                    title: 'team',
+                    templateUrl: 'team/team.html',
                     settings: {
                         nav: 2,
-                        content: '<i class="fa fa-male"></i> League'
+                        content: '<i class="fa fa-male"></i> Team'
                     }
                 }
             }, {
