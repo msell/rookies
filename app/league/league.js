@@ -12,7 +12,6 @@
         vm.league = {};
         vm.messageCount = 0;
         vm.league = {};
-        vm.people = [];
         vm.title = 'League';
         activate();
 

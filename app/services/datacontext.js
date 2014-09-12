@@ -30,7 +30,7 @@
         }
 
         function getLeague() {
-            var url = 'http://football4.myfantasyleague.com/2014/export/export?TYPE=league&L=13040&W=&JSON=1&F=0012&callback=JSON_CALLBACK';
+            var url = 'http://whoshouldibench.herokuapp.com/mfl_rosters/1?league=13040&roster=Dumb%20Punts&callback=JSON_CALLBACK';
 
             return $q.when($http.jsonp(url).success(function(data){
                 console.log(data);
