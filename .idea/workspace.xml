@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="41f803ec-c5e6-44d3-bc3b-f9b222a76598" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/team/team.html" afterPath="$PROJECT_DIR$/app/team/team.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rookies.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,7 +82,7 @@
       <file leaf-file-name="team.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/team/team.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="36" selection-start="1416" selection-end="1416" vertical-scroll-proportion="0.6899489" vertical-offset="0" max-vertical-offset="645">
+            <state line="35" column="10" selection-start="1582" selection-end="1582" vertical-scroll-proportion="0.8943782" vertical-offset="0" max-vertical-offset="615">
               <folding />
             </state>
           </provider>
@@ -768,7 +767,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/team/team.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="36" selection-start="1416" selection-end="1416" vertical-scroll-proportion="0.6899489" vertical-offset="0" max-vertical-offset="645">
+        <state line="35" column="10" selection-start="1582" selection-end="1582" vertical-scroll-proportion="0.8943782" vertical-offset="0" max-vertical-offset="615">
           <folding />
         </state>
       </provider>
