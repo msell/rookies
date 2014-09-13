@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41f803ec-c5e6-44d3-bc3b-f9b222a76598" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/team/team.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/league/league.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/league/league.js" afterPath="$PROJECT_DIR$/app/team/team.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config.route.js" afterPath="$PROJECT_DIR$/app/config.route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/datacontext.js" afterPath="$PROJECT_DIR$/app/services/datacontext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/layout/topnav.html" afterPath="$PROJECT_DIR$/app/layout/topnav.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/team/team.html" afterPath="$PROJECT_DIR$/app/team/team.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rookies.iws" />
@@ -35,7 +29,7 @@
       <file leaf-file-name="datacontext.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/services/datacontext.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="720">
+            <state line="10" column="33" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
@@ -53,7 +47,7 @@
       <file leaf-file-name="team.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/team/team.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="5" selection-start="875" selection-end="875" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+            <state line="25" column="37" selection-start="836" selection-end="836" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
               <folding />
             </state>
           </provider>
@@ -89,7 +83,7 @@
       <file leaf-file-name="team.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/team/team.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="86" selection-start="546" selection-end="546" vertical-scroll-proportion="0.22998296" vertical-offset="0" max-vertical-offset="600">
+            <state line="27" column="36" selection-start="1416" selection-end="1416" vertical-scroll-proportion="0.6899489" vertical-offset="0" max-vertical-offset="645">
               <folding />
             </state>
           </provider>
@@ -172,8 +166,8 @@
         <option value="$PROJECT_DIR$/app/league/league.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/config.route.js" />
-        <option value="$PROJECT_DIR$/app/team/team.js" />
         <option value="$PROJECT_DIR$/app/services/datacontext.js" />
+        <option value="$PROJECT_DIR$/app/team/team.js" />
         <option value="$PROJECT_DIR$/app/team/team.html" />
       </list>
     </option>
@@ -187,8 +181,8 @@
     <initial>false</initial>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="3200" />
-    <option name="y" value="302" />
+    <option name="x" value="1280" />
+    <option name="y" value="22" />
     <option name="width" value="1280" />
     <option name="height" value="1054" />
   </component>
@@ -234,38 +228,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="rookies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rookies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rookies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui.bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rookies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rookies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -452,7 +414,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3200" y="302" width="1280" height="1054" extended-state="0" />
+    <frame x="1280" y="22" width="1280" height="1054" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -790,23 +752,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/team/team.js">
+    <entry file="file://$PROJECT_DIR$/app/services/datacontext.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="5" selection-start="875" selection-end="875" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+        <state line="10" column="33" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="720">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/datacontext.js">
+    <entry file="file://$PROJECT_DIR$/app/team/team.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="720">
+        <state line="25" column="37" selection-start="836" selection-end="836" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/team/team.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="86" selection-start="546" selection-end="546" vertical-scroll-proportion="0.22998296" vertical-offset="0" max-vertical-offset="600">
+        <state line="27" column="36" selection-start="1416" selection-end="1416" vertical-scroll-proportion="0.6899489" vertical-offset="0" max-vertical-offset="645">
           <folding />
         </state>
       </provider>
