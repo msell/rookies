@@ -5,7 +5,7 @@
 
     // Collect the routes
     app.constant('routes', getRoutes());
-    
+
     // Configure the routes and route resolvers
     app.config(['$routeProvider', 'routes', routeConfigurator]);
     function routeConfigurator($routeProvider, routes) {
@@ -13,33 +13,24 @@
         routes.forEach(function (r) {
             $routeProvider.when(r.url, r.config);
         });
-        $routeProvider.otherwise({ redirectTo: '/dashboard' });
+        $routeProvider.otherwise({ redirectTo: '/league' });
     }
 
     // Define the routes 
     function getRoutes() {
         return [
             {
-                url: '/dashboard',
+                url: '/league',
                 config: {
-                    templateUrl: 'dashboard/dashboard.html',
-                    title: 'dashboard',
+                    title: 'league',
+                    templateUrl: 'league/league.html',
                     settings: {
                         nav: 1,
-                        content: '<i class="fa fa-dashboard"></i> Dashboard'
+                        content: '<i class="fa fa-male"></i> League'
                     }
                 }
-            }, {
-                url: '/team',
-                config: {
-                    title: 'team',
-                    templateUrl: 'team/team.html',
-                    settings: {
-                        nav: 2,
-                        content: '<i class="fa fa-male"></i> Team'
-                    }
-                }
-            }, {
+            },
+            {
                 url: '/admin',
                 config: {
                     title: 'admin',
