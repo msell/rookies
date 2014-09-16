@@ -8,39 +8,26 @@
     var $q = common.$q;
 
     var service = {
-      getRoster: getPeople,
-      getMessageCount: getMessageCount,
-      getLeague: getLeague
+      getOwners: getOwners,
+      getLeague: getLeague,
+      getTeam: getTeam
     };
 
     return service;
 
-    function getMessageCount() { return $q.when(72); }
 
-    function getPeople() {
-      var players = getData('http://localhost:3000/mfl_rosters/1?callback=JSON_CALLBACK');
-      console.log(players);
-
-      var people = [
-        { position: 'QB', firstName: 'Tony', lastName: 'Romo', team: 'Cowboys', byeWeek: 4, totalPoints: 0 },
-        { position: 'RB', firstName: 'Adrian', lastName: 'Peterson', team: 'Vikings', byeWeek: 6, totalPoints: 0 },
-        { position: 'WR', firstName: 'Dez', lastName: 'Bryant', team: 'Cowboys', byeWeek: 4, totalPoints: 0 },
-        { position: 'TE', firstName: 'Jason', lastName: 'Witten', team: 'Cowboys', byeWeek: 4, totalPoints: 0 },
-        { position: 'WR', firstName: 'Terrance', lastName: 'Williams', team: 'Cowboys', byeWeek: 4, totalPoints: 0 },
-        { position: 'DEF', firstName: 'Seatle', lastName: 'Seahawks', team: 'Seahawks', byeWeek: 4, totalPoints: 0 }
-      ];
-      return $q.when(people);
-    }
-
+      function getOwners(){
+          var url = 'http://whoshouldibench.herokuapp.com/mfl_leagues/13040/mfl_rosters?callback=JSON_CALLBACK';
+         return getData(url);
+      }
     function getLeague() {
-      var url = 'http://football4.myfantasyleague.com/2014/export/export?TYPE=league&L=13040&W=&JSON=1&F=0012&callback=JSON_CALLBACK';
-
-      return $q.when($http.jsonp(url).success(function(data){
-        console.log(data);
-      }).error(function(data, status){
-        console.log(status);
-      }));
+        var url = 'http://whoshouldibench.herokuapp.com/mfl_leagues/13040/mfl_rosters?callback=JSON_CALLBACK';
+        return getData(url);
     }
+      function getTeam(id) {
+          var url = 'http://whoshouldibench.herokuapp.com/mfl_leagues/13040/mfl_rosters/' + id + '?callback=JSON_CALLBACK';
+          return getData(url);
+      }
 
     function getData(url){
       return $q.when($http.jsonp(url).success(function(data){

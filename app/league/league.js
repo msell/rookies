@@ -9,23 +9,54 @@
 
         var vm = this;
         vm.leagueName = "Rookies report to camp";
-        vm.league = {};
-        vm.messageCount = 0;
-        vm.league = {};
-        vm.people = [];
+        vm.team = [];
+        vm.owners = [];
+        vm.league = [];
         vm.title = 'League';
         activate();
 
         function activate() {
             var promises = [getLeague()];
             common.activateController(promises, controllerId)
-                .then(function () { log('Activated League View'); });
+                .then(function () {
+                    log('Activated League View');
+                });
         }
 
-        function getLeague() {
-            return datacontext.getLeague().then(function(data) {
-                return vm.league = data;
+        function getTeam(id) {
+            return datacontext.getTeam(id).then(function (data) {
+                return data.data;
             });
+        }
+
+
+        function getLeague() {
+            return datacontext.getOwners().then(function (data) {
+                vm.owners = data.data;
+                var league = [];
+                angular.forEach(vm.owners, function (value, key) {
+
+                    datacontext.getTeam(zeroFill(value.id, 4)).then(function (teamData) {
+                            league.push(
+                                {
+                                    owner: angular.fromJson(value),
+                                    team: teamData.data
+                                }
+                            )
+                        }
+                    );
+
+                });
+                return vm.league = league;
+            });
+        }
+
+        function zeroFill(number, width) {
+            width -= number.toString().length;
+            if (width > 0) {
+                return new Array(width + (/\./.test(number) ? 2 : 1)).join('0') + number;
+            }
+            return number + ""; // always return a string
         }
     }
 })();
