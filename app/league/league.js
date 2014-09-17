@@ -36,7 +36,7 @@
                 var league = [];
                 angular.forEach(vm.owners, function (value, key) {
 
-                    datacontext.getTeam(zeroFill(value.id, 4)).then(function (teamData) {
+                    datacontext.getTeam(String(value.id)).then(function (teamData) {
                             league.push(
                                 {
                                     owner: angular.fromJson(value),
@@ -49,14 +49,6 @@
                 });
                 return vm.league = league;
             });
-        }
-
-        function zeroFill(number, width) {
-            width -= number.toString().length;
-            if (width > 0) {
-                return new Array(width + (/\./.test(number) ? 2 : 1)).join('0') + number;
-            }
-            return number + ""; // always return a string
         }
     }
 })();
