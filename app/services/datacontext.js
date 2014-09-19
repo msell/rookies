@@ -25,8 +25,8 @@
       return getData(url);
     }
     function getTeam(id) {
-      //var url = 'http://whoshouldibench.herokuapp.com/mfl_leagues/13040/mfl_rosters/' + id + '?callback=JSON_CALLBACK';
-      var url = 'http://localhost:3000/mfl_leagues/13040/mfl_rosters/' + id;
+      var url = 'http://whoshouldibench.herokuapp.com/mfl_leagues/13040/mfl_rosters/' + id;
+      //var url = 'http://localhost:3000/mfl_leagues/13040/mfl_rosters/' + id;
       return getAjaxData(url);
     }
 
