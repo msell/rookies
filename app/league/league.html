@@ -20,11 +20,11 @@
                                 </thead>
                                 <tbody>
                                 <tr data-ng-repeat="p in t.team">
-                                    <td>{{p.position.abbreviation}}</td>
-                                    <td>{{p.firstname + ' ' + p.lastname}}</td>
-                                    <td>{{p.team.city + ' ' + p.team.mascot}}</td>
+                                    <td>{{p.nfl_player.nfl_position.abbreviation}}</td>
+                                    <td>{{p.nfl_player.firstname + ' ' + p.nfl_player.lastname}}</td>
+                                    <td>{{p.nfl_player.nfl_team.city + ' ' + p.nfl_player.nfl_team.mascot}}</td>
                                     <td>{{p.byeWeek}}</td>
-                                    <td>{{p.totalPoints}}</td>
+                                    <td>{{p.nfl_player.points_scored}}</td>
                                 </tr>
                                 </tbody>
                             </table>

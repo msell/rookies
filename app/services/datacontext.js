@@ -16,18 +16,27 @@
     return service;
 
 
-      function getOwners(){
-          var url = 'http://whoshouldibench.herokuapp.com/mfl_leagues/13040/mfl_rosters?callback=JSON_CALLBACK';
-         return getData(url);
-      }
-    function getLeague() {
-        var url = 'http://whoshouldibench.herokuapp.com/mfl_leagues/13040/mfl_rosters?callback=JSON_CALLBACK';
-        return getData(url);
+    function getOwners(){
+      var url = 'http://whoshouldibench.herokuapp.com/mfl_leagues/13040/mfl_rosters?callback=JSON_CALLBACK';
+      return getData(url);
     }
-      function getTeam(id) {
-          var url = 'http://whoshouldibench.herokuapp.com/mfl_leagues/13040/mfl_rosters/' + id + '?callback=JSON_CALLBACK';
-          return getData(url);
-      }
+    function getLeague() {
+      var url = 'http://whoshouldibench.herokuapp.com/mfl_leagues/13040/mfl_rosters?callback=JSON_CALLBACK';
+      return getData(url);
+    }
+    function getTeam(id) {
+      //var url = 'http://whoshouldibench.herokuapp.com/mfl_leagues/13040/mfl_rosters/' + id + '?callback=JSON_CALLBACK';
+      var url = 'http://localhost:3000/mfl_leagues/13040/mfl_rosters/' + id;
+      return getAjaxData(url);
+    }
+
+    function getAjaxData(url){
+      return $q.when($http.get(url).success(function(data){
+        console.log(data);
+      }).error(function(data, status){
+        console.log('error');
+      }));
+    }
 
     function getData(url){
       return $q.when($http.jsonp(url).success(function(data){
