@@ -21,6 +21,8 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
+  grunt.loadNpmTasks('grunt-replace');
+
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -366,6 +368,36 @@ module.exports = function (grunt) {
       }
     },
 
+    // Grunt replace to handle templatization of environment specific data
+    replace: {
+      development: {
+        options: {
+          patterns: [{
+            json: grunt.file.readJSON('./config/environments/development.json')
+          }]
+        },
+        files: [{
+          expand: true,
+          flatten: true,
+          src: ['./config/config.js'],
+          dest: '<%= yeoman.app %>/scripts/services/'
+        }]
+      },
+      production: {
+        options: {
+          patterns: [{
+            json: grunt.file.readJSON('./config/environments/production.json')
+          }]
+        },
+        files: [{
+          expand: true,
+          flatten: true,
+          src: ['./config/config.js'],
+          dest: '<%= yeoman.app %>/scripts/services/'
+        }]
+      },
+    },
+
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
@@ -402,6 +434,7 @@ module.exports = function (grunt) {
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
+      'replace:development',
       'watch'
     ]);
   });
@@ -434,6 +467,11 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin'
+  ]);
+
+  grunt.registerTask('production', [
+      'replace:production'
+      // Add further deploy related tasks here
   ]);
 
   grunt.registerTask('default', [

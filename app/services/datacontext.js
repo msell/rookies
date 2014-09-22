@@ -2,9 +2,9 @@
   'use strict';
 
   var serviceId = 'datacontext';
-  angular.module('rookiesApp').factory(serviceId, ['$http','common', datacontext]);
+  angular.module('rookiesApp').factory(serviceId, ['$http','common','configuration', datacontext]);
 
-  function datacontext($http, common) {
+  function datacontext($http, common, config) {
     var $q = common.$q;
 
     var service = {
@@ -25,8 +25,7 @@
       return getData(url);
     }
     function getTeam(id) {
-      var url = 'http://whoshouldibench.herokuapp.com/mfl_leagues/13040/mfl_rosters/' + id;
-      //var url = 'http://localhost:3000/mfl_leagues/13040/mfl_rosters/' + id;
+      var url = config.whoShouldIBenchAPI + id;
       return getAjaxData(url);
     }
 

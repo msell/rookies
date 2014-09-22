@@ -1,9 +1,9 @@
 (function () {
     'use strict';
     var controllerId = 'league';
-    angular.module('rookiesApp').controller(controllerId, ['common', 'datacontext', dashboard]);
+    angular.module('rookiesApp').controller(controllerId, ['common', 'datacontext','configuration', dashboard]);
 
-    function dashboard(common, datacontext) {
+    function dashboard(common, datacontext, configuration) {
         var getLogFn = common.logger.getLogFn;
         var log = getLogFn(controllerId);
 
